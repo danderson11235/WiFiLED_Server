@@ -1,12 +1,17 @@
-#include<stdio.h>
-#include<iostream>
-#include<winsock2.h>
+#include <stdio.h>
+#include <iostream>
+#include <winsock2.h>
+#include <endpointvolume.h>
+#include <time.h>
+#include "../include/kiss_fft130/kiss_fft.h"
 
 #pragma comment(lib,"ws2_32.lib") //Winsock Library
 
 #define SERVER "192.168.1.18"	//ip address of udp server
 #define BUFLEN 512	//Max length of buffer
 #define PORT 4210	//The port on which to listen for incoming data
+
+void createMessage();
 
 int main(void)
 {
@@ -40,6 +45,10 @@ int main(void)
 
 	//start communication
 
+	while (true)
+	{
+		
+	}
 	//send the message
 	if (sendto(s, message, strlen(message), 0, (struct sockaddr*)&si_other, slen) == SOCKET_ERROR)
 	{
@@ -51,4 +60,8 @@ int main(void)
 	WSACleanup();
 
 	return 0;
+}
+
+void createMessage() {
+
 }
