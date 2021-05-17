@@ -3,8 +3,7 @@
 #include <winsock2.h>
 #include <endpointvolume.h>
 #include <ctime>
-#include "../include/kissfft-master/kiss_fftr.h"
-#include "../include//kissfft-master/_kiss_fft_guts.h"
+#include <kissfft.h>
 
 #pragma comment(lib,"ws2_32.lib") //Winsock Library
 
