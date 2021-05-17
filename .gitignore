@@ -335,3 +335,4 @@ ASALocalRun/
 
 #CMakeOutput
 src/out
+build
